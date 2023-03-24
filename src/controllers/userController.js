@@ -5,6 +5,8 @@ const { uploadFile } = require('../aws/aws-connection')
 const { validCity, validFname, validLname, validPinCode, validStreet,
       validMail, validNumber, validPassword, validObjectId, validFile } = require('../validations/validator1')
 
+//=====================================// CREATE USER //==================================//
+
 const register = async (req, res) => {
       try {
             let data = req.body;
@@ -153,6 +155,8 @@ const register = async (req, res) => {
 
 }
 
+//=====================================// LOGIN USER //==================================//
+
 const login = async (req, res) => {
 
       try {
@@ -189,6 +193,7 @@ const login = async (req, res) => {
 
 }
 
+//=====================================// GET USER DETAILS  //==================================//
 
 const getUser = async (req, res) => {
       try {
@@ -209,6 +214,8 @@ const getUser = async (req, res) => {
             return res.status(500).send({ status: false, message: error, message })
       }
 }
+
+//=====================================// UPDATE USER DATA //==================================//
 
 const updateUser = async (req, res) => {
       try {

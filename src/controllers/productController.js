@@ -8,6 +8,8 @@ let numValid = (value) => /^[0-9]{1,9}(?:\.[0-9]{2})?$/.test(value.trim())
 let isNum = (value) => /^[0-9]{1,2}$/.test(value)
 const validRegex = (value) => /^[a-zA-Z., ]{3,100}$/.test(value.trim())
 
+//=====================================// CREATE PRODUCT //==================================//
+
 const createProduct = async function (req, res) {
   try {
 
@@ -87,7 +89,7 @@ const createProduct = async function (req, res) {
   }
 }
 
-// get api for filter=========================
+//=====================================// UPDATE PRODUCT BY FILTER //==================================//
 
 const getProductByFilter = async function (req, res) {
   try {
@@ -181,13 +183,7 @@ const getProductByFilter = async function (req, res) {
   }
 }
 
-// ================================
-
-
-
-
-
-
+//=====================================// GET ALL PRODUCT  //==================================//
 
 const getProduct = async (req, res) => {
   try {
@@ -204,7 +200,7 @@ const getProduct = async (req, res) => {
   }
 }
 
-
+//=====================================// UPDATE PRODUCT //==================================//
 
 let updateProduct = async (req, res) => {
   try {
@@ -297,10 +293,8 @@ let updateProduct = async (req, res) => {
   }
 }
 
+//=====================================// DELETE PRODUCT //==================================//
 
-
-
-//delete product
 const deleteProduct = async (req, res) => {
   try {
     let productId = req.params.productId
